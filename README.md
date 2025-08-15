@@ -12,45 +12,20 @@ The model is trained on real-world customer data (`customer_churn.csv`) to ident
 - **Description**: (Add details—number of rows, features, and notable columns, e.g., `customerID`, `tenure`, `MonthlyCharges`, `Churn`)  
 - **Source**: (If applicable; otherwise note it's a local sample dataset)
 
----
+- Total records: **1,407** (999 non-churn; 408 churn)  
+- Features: (Please specify here—e.g., customer demographics, monthly usage, tenure, etc.)
 
-##  Project Workflow
+##  Model Evaluation Results
 
-1. **Data Exploration & Preprocessing**  
-   - Cleaned missing values, encoded categorical variables, handled outliers, etc. (List any specific techniques used.)  
-2. **Feature Engineering**  
-   - Created features such as month-over-month charge differences, total services subscribed, average tenure, etc.  
-3. **Modeling**  
-   - Trained and evaluated multiple classifiers like Logistic Regression, Random Forest, XGBoost, etc. (Please replace with what you used.)  
-4. **Evaluation Metrics**  
-   - Measured model performance using metrics like accuracy, precision, recall, F1-score, ROC-AUC, etc. (Insert actual results.)  
-5. **Remarks & Learnings**  
-   - Insights gained (e.g., key features influencing churn, improvements after resampling, etc.)  
+| Class        | Precision | Recall | F1-Score | Support |
+|--------------|:---------:|:------:|:--------:|--------:|
+| Non-churn (0) | 83%       | 87%    | 85%      | 999     |
+| Churn (1)    | 65%       | 58%    | 61%      | 408     |
 
----
+- **Overall Accuracy**: 79%  
+- **Macro-average**: Precision 74%, Recall 72%, F1-Score 73%  
+- **Weighted-average**: Precision 78%, Recall 79%, F1-Score 78%
 
-##  Results
+> **Interpretation**: The model performs solidly for non-churn cases (F1-score of 85%), but identifying churn cases remains moderate (F1-score of 61%), indicating room for improvement.
 
-- **Best Model**: e.g., Random Forest  
-- **Performance**: Achieved approximately *X% accuracy* and *Y ROC-AUC* on test set (replace with your results).  
-- **Improvements**: Mentioned techniques (like SMOTE or parameter tuning) improved recall by *Z%*, etc.
-
----
-
-##  How to Run
-
-```bash
-# Step 1: Clone the repository
-git clone https://github.com/Ruthvik8102/Churn-Prediction.git
-
-# Step 2: Navigate to the project folder
-cd Churn-Prediction
-
-# Step 3: Create and activate a virtual environment (optional but recommended)
-python3 -m venv env && source env/bin/activate
-
-# Step 4: Install required libraries
-pip install pandas numpy scikit-learn matplotlib seaborn
-
-# Step 5: Launch the notebook
-jupyter notebook churnnn.ipynb
+##  Project Structure
