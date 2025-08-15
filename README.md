@@ -27,5 +27,3 @@ The model is trained on real-world customer data (`customer_churn.csv`) to ident
 - **Weighted-average**: Precision 78%, Recall 79%, F1-Score 78%
 
 > **Interpretation**: The model performs solidly for non-churn cases (F1-score of 85%), but identifying churn cases remains moderate (F1-score of 61%), indicating room for improvement.
-
-##  Project Structure
